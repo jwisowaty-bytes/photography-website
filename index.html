@@ -3,51 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name Photography</title>
+<title>Lens2Life Media</title>
 <link rel="stylesheet" href="style.css">
+
+<script>
+function openLightbox(img){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=img.src;
+}
+
+function closeLightbox(){
+document.getElementById("lightbox").style.display="none";
+}
+</script>
+
 </head>
+
 <body>
 
 <header>
-  <div class="logo">Your Name Photography</div>
-  <nav>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#services">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<h2>Lens2Life Media</h2>
+<nav>
+<a href="#portfolio">Portfolio</a>
+<a href="#services">Services</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
-<section id="hero">
-  <div class="hero-text">
-    <h1>Capturing Moments That Last Forever</h1>
-    <p>Professional Photography for Weddings, Portraits, and Events</p>
-  </div>
+<section class="hero">
+<h1>Visual Engineering Reimagined</h1>
+<p>Photography for the 21st century</p>
 </section>
 
 <section id="portfolio">
-  <h2>Portfolio</h2>
-  <div class="gallery">
-    <div class="gallery-item"><img src="images/portfolio1.png" alt="Portfolio 1"></div>
-    <div class="gallery-item"><img src="images/portfolio2.png" alt="Portfolio 2"></div>
-    <div class="gallery-item"><img src="images/portfolio3.png" alt="Portfolio 3"></div>
-    <div class="gallery-item"><img src="images/portfolio4.png" alt="Portfolio 4"></div>
-  </div>
+
+<h2>Portfolio</h2>
+
+<div class="gallery">
+
+<img src="images/portfolio1.png" onclick="openLightbox(this)">
+<img src="images/portfolio2.png" onclick="openLightbox(this)">
+<img src="images/portfolio3.png" onclick="openLightbox(this)">
+<img src="images/portfolio4.png" onclick="openLightbox(this)">
+
+</div>
+
 </section>
 
 <section id="services">
-  <h2>Services</h2>
-  <div class="services-cards">
-    <div class="card"><h3>Weddings & Engagements</h3><p>Beautifully captured special moments.</p></div>
-    <div class="card"><h3>Portraits & Family</h3><p>Professional studio and outdoor sessions.</p></div>
-    <div class="card"><h3>Events & Corporate</h3><p>Memorable coverage for all occasions.</p></div>
-    <div class="card"><h3>Custom Packages</h3><p>Flexible options to fit your needs.</p></div>
-  </div>
+
+<h2>Services</h2>
+
+<div class="service-grid">
+
+<div>
+<h3>Real Estate</h3>
+<p>Residental and Commercial packages.</p>
+<p>3D Virtual Tours / 3D Floorplans</p>
+<p>Drone Photos</p>
+</div>
+
+<div>
+<h3>Product Photography</h3>
+<p>Website Ready Stock Photos</p>
+<p>Creative Marketing Photos</p>
+</div>
+  
+<div>
+<h3>Portraits</h3>
+<p>Family, couples, and individual sessions.</p>
+<p>Awkward Photoshoots</p>
+<p> Pets Photoshoot </p>
+<p>Headshots and School Photos</p>
+<p>Passport Photoshoots</p>
+</div>
+
+<div>
+<h3>Events</h3>
+<p>Corporate, Private event coverage and Live Music.</p>
+</div>
+
+<div>
+<h3>Automobiles</h3>
+<p>Dealership Car, Race coverage and Portraits</p>
+</div>
+</div>
+
 </section>
 
 <footer>
-  <p>© 2026 Your Name Photography</p>
-  <a href="contact.html">Contact Me</a>
+
+<p>© 2026 Lens2Life Media</p>
+
+<p>
+<a href="https://500px.com/p/lens2lifemedia">Instagram</a>
+</p>
+
 </footer>
+
+<div id="lightbox" onclick="closeLightbox()">
+<img id="lightbox-img">
+</div>
 
 </body>
 </html>

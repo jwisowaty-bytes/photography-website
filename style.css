@@ -25,7 +25,7 @@ text-decoration:none;
 
 .hero{
 height:80vh;
-background:url("images/hero.png") center/cover no-repeat;
+background:url("images/hero.jpg") center/cover no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;

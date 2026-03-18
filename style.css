@@ -64,11 +64,19 @@ font-size:48px;
     height: 200px; /* Fixed height for uniformity */
     width: auto; /* Maintain aspect ratio */
     display: inline-block; /* Aligns images in a row */
+    transition: transform 0.3s ease;
     cursor: pointer; /* Optional: adds a pointer cursor on hover */
     /* Optional: add some styling for a better look */
     border-radius: 5px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+    
+.zoomed {
+  transform: scale(1.8); /* Adjust this value for how big it should get */
+  z-index: 10;            /* Ensures the expanded image stays on top */
+  position: relative;
+}
+
 #portfolio{
 padding:60px 20px;
 text-align:center;

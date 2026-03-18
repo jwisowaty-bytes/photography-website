@@ -91,5 +91,20 @@
 <img src="images/LOGO.jpg" onclick="openLightbox(this)">
 </div>
 </div>
+<script>
+ function toggleZoom(img) {
+  // If this image is already zoomed, remove the class
+  if (img.classList.contains('zoomed')) {
+    img.classList.remove('zoomed');
+  } else {
+    // Optional: Remove zoom from any OTHER images first
+    document.querySelectorAll('.scroll-container img').forEach(i => {
+      i.classList.remove('zoomed');
+    });
+    // Zoom the clicked image
+    img.classList.add('zoomed');
+  }
+}
+</script>
 </Body>
 </html>

@@ -5,7 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio - Lens2Life Media</title>
 <link rel="stylesheet" href="style.css">
+
+<script>
+function openLightbox(img){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=img.src;
+}
+
+function closeLightbox(){
+document.getElementById("lightbox").style.display="none";
+}
+</script>
+ 
 </head>
+ 
 <body>
 
 <header>
@@ -22,14 +35,14 @@
 
 <div class="scroll-container">
    <!-- 'this' passes the specific image being clicked to the function -->
- <img src="images/product1.jpg" onclick="toggleZoom(this)" alt="Description of image 1">
- <img src="images/product2.jpg" onclick="toggleZoom(this)" alt="Description of image 1">
- <img src="images/product3.jpg" onclick="toggleZoom(this)" alt="Description of image 1">
- <img src="images/product4.jpg" onclick="toggleZoom(this)" alt="Description of image 1">
- <img src="images/product5.jpg" onclick="toggleZoom(this)" alt="Description of image 1">
- <img src="images/product6.jpg" onclick="toggleZoom(this)" alt="Description of image 1">
- <img src="images/product7.jpg" onclick="toggleZoom(this)" alt="Description of image 1">
- <img src="images/product8.jpg" onclick="toggleZoom(this)" alt="Description of image 1">
+ <img src="images/product1.jpg" onclick="openLightbox(this)" alt="Nikon Camera">
+ <img src="images/product2.jpg" onclick="openLightbox(this)" alt="Food Photography">
+ <img src="images/product3.jpg" onclick="openLightbox(this)" alt="Description of image 1">
+ <img src="images/product4.jpg" onclick="openLightbox(this)" alt="Description of image 1">
+ <img src="images/product5.jpg" onclick="openLightbox(this)" alt="Description of image 1">
+ <img src="images/product6.jpg" onclick="openLightbox(this)" alt="Description of image 1">
+ <img src="images/product7.jpg" onclick="openLightbox(this)" alt="Description of image 1">
+ <img src="images/product8.jpg" onclick="openLightbox(this)" alt="Description of image 1">
  <img src="images/product9.jpg" onclick="toggleZoom(this)" alt="Description of image 1">
 </div>
   
@@ -38,6 +51,7 @@
         </header>
 
 <div class="scroll-container">
+   <!-- 'this' passes the specific image being clicked to the function -->
  <img src="images/RE1.jpg" onclick="openLightbox(this)">
  <img src="images/RE2.jpg" onclick="openLightbox(this)">
  <img src="images/RE3.jpg" onclick="openLightbox(this)">
@@ -90,21 +104,13 @@
 <img src="images/hero.jpg" onclick="openLightbox(this)">
 <img src="images/LOGO.jpg" onclick="openLightbox(this)">
 </div>
+
+<div id="lightbox" onclick="closeLightbox()">
+<img id="lightbox-img">
 </div>
-<script>
- function toggleZoom(img) {
-  // If this image is already zoomed, remove the class
-  if (img.classList.contains('zoomed')) {
-    img.classList.remove('zoomed');
-  } else {
-    // Optional: Remove zoom from any OTHER images first
-    document.querySelectorAll('.scroll-container img').forEach(i => {
-      i.classList.remove('zoomed');
-    });
-    // Zoom the clicked image
-    img.classList.add('zoomed');
-  }
-}
-</script>
+   
+</div>
+ 
 </Body>
+ 
 </html>

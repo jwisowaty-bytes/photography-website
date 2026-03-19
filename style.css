@@ -24,7 +24,7 @@ text-decoration:none;
 }
 
 .hero{
-height:20vh;
+height:1000vh;
 background:url("images/hero.jpg") center/cover no-repeat;
 display:flex;
 flex-direction:column;
@@ -40,7 +40,7 @@ font-size:48px;
 .main-container {
     width: 100%;
     /* Optional: add some padding to the main content area */
-    padding: 10px 0; 
+    padding: 30px 0; 
 }
 
 .section-header h2 {

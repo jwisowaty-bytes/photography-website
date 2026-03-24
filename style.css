@@ -105,8 +105,8 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
 margin-top:30px;
-background: url("images/hero.png") center/cover no-repeat
-transparency: 80% 
+background: url("images/hero.png") center/cover no-repeat;
+transparency: 50%;
 }
 
 footer{

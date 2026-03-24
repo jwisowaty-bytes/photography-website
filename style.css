@@ -24,7 +24,7 @@ text-decoration:none;
 }
 
 .hero{
-height:130vh;
+height:90vh;
 background:url("images/hero.jpg") center/cover no-repeat;
 display:flex;
 flex-direction:column;
@@ -73,7 +73,7 @@ font-size:48px;
 
 .background-wrapper {
   position: relative;
-  height: 100%; /* Set desired height */
+  height: 400px; /* Set desired height */
 }
 
 .background-image {
@@ -124,6 +124,20 @@ gap:20px;
 margin-top:30px;
 z-index: 1;
 }
+
+.semi-transparent-background {
+    /* Using RGBA: 0,0,0 is black, 0.5 is the alpha (opacity) value */
+    background-color: rgba(0, 0, 0, 0.5); 
+    
+    /* Using 8-digit hex (modern browsers): #000000 is black, 80 is 50% opacity in hex */
+    /* background-color: #00000080; */ 
+    
+    /* Using the 'transparent' keyword for full transparency */
+    /* background-color: transparent; */
+    
+    color: white; /* Ensure text is readable */
+}
+
 
 footer{
 text-align:center;

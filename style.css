@@ -70,7 +70,23 @@ font-size:48px;
     border-radius: 5px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-    
+
+.background-wrapper {
+  position: relative;
+  height: 400px; /* Set desired height */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales properly */
+  opacity: 0.5; /* Adjust transparency (0.0 to 1.0) */
+  z-index: -1; /* Pushes the image behind the content */
+}
+
 .zoomed {
   transform: scale(1.8); /* Adjust this value for how big it should get */
   z-index: 10;            /* Ensures the expanded image stays on top */

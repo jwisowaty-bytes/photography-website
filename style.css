@@ -24,7 +24,7 @@ text-decoration:none;
 }
 
 .hero{
-height:90vh;
+height:110vh;
 background:url("images/hero.jpg") center/cover no-repeat;
 display:flex;
 flex-direction:column;

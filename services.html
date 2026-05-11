@@ -76,12 +76,25 @@ nav a{
     padding:40px 20px;
 }
 
-/* CONTENT BOXES */
+/* MAKE EACH H2 SECTION ITS OWN COLUMN */
 .semi-transparent-background{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+    gap:30px;
+
     background:rgba(0,0,0,0.55);
     padding:30px;
     border-radius:12px;
     backdrop-filter:blur(2px);
+}
+
+/* EACH SERVICE BLOCK */
+.semi-transparent-background > div{
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:10px;
+    height:100%;
+}
 }
 
 /* GRID */

@@ -4,144 +4,239 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services - Lens2Life Media</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    color:white;
+    line-height:1.6;
+    position:relative;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* FIXED BACKGROUND IMAGE */
+.background-wrapper{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-2;
+}
+
+.background-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* DARK OVERLAY FOR 65% TRANSPARENCY */
+.background-wrapper::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    z-index:1;
+}
+
+/* CONTENT ABOVE IMAGE */
+header,
+section,
+footer{
+    position:relative;
+    z-index:2;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:40px 20px;
+    background:rgba(0,0,0,0.45);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* MAIN CONTENT */
+#services{
+    padding:40px 20px;
+}
+
+/* CONTENT BOXES */
+.semi-transparent-background{
+    background:rgba(0,0,0,0.55);
+    padding:30px;
+    border-radius:12px;
+    backdrop-filter:blur(2px);
+}
+
+/* GRID */
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:25px;
+}
+
+/* TEXT SPACING */
+h2, h3{
+    margin-bottom:10px;
+    color:#ffffff;
+}
+
+p{
+    margin-bottom:15px;
+}
+
+ul{
+    padding-left:25px;
+    margin-bottom:25px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.45);
+}
+
+footer a{
+    color:white;
+}
+
+/* LIGHTBOX */
+#lightbox{
+    display:none;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-	<h1>Services Pricing and Packages</h1>
-  <nav>
-    <a href="index.html">Home</a>
-  </nav>
-</header>
-  
+<!-- FIXED BACKGROUND -->
 <div class="background-wrapper">
-  <img src="images/hero.jpg" class="background-image" alt="Background">
+    <img src="images/hero.jpg" class="background-image" alt="Background">
 </div>
 
-	  <section id="services">
-	<div class="semi-transparent-background">
+<header>
+    <h1>Services Pricing and Packages</h1>
 
-		
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+<section id="services">
+
+<div class="semi-transparent-background">
+
 <div>
-<p>
-<h2>Residental and Commercial 15–30 photos</h2>
-  (agent subscriptions available)
-<p>
-	<br>
+<h2>Residential and Commercial 15–30 photos</h2>
+<p>(agent subscriptions available)</p>
+
 <ul>
-	<ul style="padding-left: 50px;">
-<li>Small Buildings (<2000 sq ft): $150–225</li>
+<li>Small Buildings (&lt;2000 sq ft): $150–225</li>
 <li>Average Buildings (2000–3000 sq ft): $200–350</li>
 <li>Luxury Buildings (3000+ sq ft): $350–600</li>
 </ul>
-</p>
-</p>
 </div>
 
 <div>
-<p>	
- <h2>Virtual Tours / 3D Floorplans</h2>
-	<p>
-		<br>
+<h2>Virtual Tours / 3D Floorplans</h2>
+
 <ul>
 <li>Small Buildings: $150–200</li>
 <li>Average Buildings: $200–300</li>
 <li>Luxury Buildings: $300–500</li>
 </ul>
-</p>
-</p>
 </div>
 
 <div>
-<p>	
-  <h2>Drone Photos (5–15 photos 1-2 videos)</h2>
-	<p>
-		<br>
+<h2>Drone Photos (5–15 photos 1-2 videos)</h2>
+
 <ul>
 <li>Standalone drone photo shoot: $175–300</li>
 <li>Standalone drone video: $175–300</li>
 <li>Drone photo + video: $250–500</li>
- </ul>
-</p>
-</p>
+</ul>
 </div>
-	
+
 <div>
-<p>
 <h2>Bundle and Save</h2>
-  (prices show starting price based on size)
-<p>
-	<br>
+<p>(prices show starting price based on size)</p>
+
 <ul>
 <li>Photos + Matterport → $295</li>
 <li>Photos + drone → $325 (+$150 video add on)</li>
 <li>Photos + drone + Matterport → $525 (+$150 video add on)</li>
 </ul>
-</p>
-</p>
 </div>
 
-	</div>
-  <section id="services">
-	<div class="service-grid">
-		<div class="semi-transparent-background">
+</div>
+</section>
+
+<section id="services">
+
+<div class="service-grid">
+
+<div class="semi-transparent-background">
 
 <div>
-	<p>
 <h2>Product Photography</h2>
-      (prices are per product)
-<p>
-	<br>
+<p>(prices are per product)</p>
+
 <ul>
 <li>Basic: $40–75 per product</li>
 <li>Commercial quality: $75–150 <br>(includes digital editing)</li>
 <li>High-end branding: $150–400 <br>(includes studio equipment + digital editing)</li>
 </ul>
-</p>
-</p>
-  </div>
-  
-<div>
-<p>
-<h2>Portraits</h2>
-<p>
-	<br>
-<ul>
-<li>Mini session: $60<br>(ex: Headshots, School Photos or Passport Photoshoots</li>
-<li>Standard portrait: $60–100 <br>(ex: couples, individual sessions, or Awkward Photoshoots)</li>
-<li>Family session: $100–150 <br>(ex Family size of 3+, or Pets Photoshoot) </li>
-</ul>
-</p>
-</p>
 </div>
 
 <div>
-<p><h3>Events</h3></p>
-	<br>
+<h2>Portraits</h2>
+
+<ul>
+<li>Mini session: $60 <br>(Headshots, School Photos, Passport Photos)</li>
+<li>Standard portrait: $60–100 <br>(Couples, Individuals, Awkward Photoshoots)</li>
+<li>Family session: $100–150 <br>(Family size of 3+, Pets)</li>
+</ul>
+</div>
+
+<div>
+<h3>Events</h3>
 <p>$125/hr Photo Shoot</p>
 </div>
 
 <div>
-	<p>
 <h3>Automobiles</h3>
-		<p>
-			<br>
+
 <ul>
 <li>Private owners: $120–250 per car</li>
-<li>Dealership Volume pricing:	$25–75 per car</li>
-<li>Marketing shoots: $250–600 </li>
+<li>Dealership Volume pricing: $25–75 per car</li>
+<li>Marketing shoots: $250–600</li>
 </ul>
-</p>
-	</p>
-  </div>
-		</div>
-
-</section>
-  
-<div id="lightbox" onclick="closeLightbox()">
-<img id="lightbox-img">
 </div>
+
+</div>
+</div>
+
 </section>
 
 <footer>
@@ -153,5 +248,6 @@
 </p>
 
 </footer>
+
 </body>
 </html>

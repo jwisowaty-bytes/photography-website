@@ -6,6 +6,7 @@
 <title>Services - Lens2Life Media</title>
 
 <style>
+
 /* RESET */
 *{
     margin:0;
@@ -13,41 +14,45 @@
     box-sizing:border-box;
 }
 
+html, body{
+    height:100%;
+}
+
+/* BODY LAYOUT */
+body{
+    font-family:Arial, sans-serif;
+    color:white;
+    line-height:1.6;
+
+    display:flex;
+    flex-direction:column;
+
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* HEADER */
 header{
-display:flex;
-justify-content:space-between;
-padding:20px;
-background:black;
-color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 40px;
+    background:black;
+    color:white;
+
+    position:relative;
+    z-index:2;
 }
 
 nav a{
-color:white;
-margin-left:40px;
-text-decoration:none;
-}
-    
-body{
-    font-family: Arial, sans-serif;
     color:white;
-    line-height:1.6;
-    position:relative;
-    min-height:100vh;
-    overflow-x:hidden;
-    
+    margin-left:40px;
+    text-decoration:none;
 }
-    
-footer{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-text-align:center;
-padding:20px;
-background:black;
-color:white;
-}
-/* FIXED BACKGROUND IMAGE */
+
+/* FIXED BACKGROUND */
 .background-wrapper{
     position:fixed;
     top:0;
@@ -63,17 +68,232 @@ color:white;
     object-fit:cover;
 }
 
-/* DARK OVERLAY FOR 65% TRANSPARENCY */
 .background-wrapper::after{
     content:"";
     position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    inset:0;
     background:rgba(0,0,0,0.65);
-    z-index:1;
 }
+
+/* MAIN PAGE CONTENT */
+main{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+
+    padding:40px;
+    gap:40px;
+
+    position:relative;
+    z-index:2;
+}
+
+/* SERVICE ROWS */
+.services-row{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:30px;
+}
+
+/* SERVICE CARDS */
+.service-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(3px);
+
+    padding:25px;
+    border-radius:12px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+
+    min-height:320px;
+}
+
+/* TEXT */
+h2, h3{
+    margin-bottom:15px;
+}
+
+p{
+    margin-bottom:15px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:black;
+    color:white;
+
+    position:relative;
+    z-index:2;
+}
+
+footer a{
+    color:white;
+}
+
+/* RESPONSIVE */
+@media (max-width:1100px){
+
+.services-row{
+    grid-template-columns:repeat(2, 1fr);
+}
+
+}
+
+@media (max-width:700px){
+
+.services-row{
+    grid-template-columns:1fr;
+}
+
+header{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="background-wrapper">
+    <img src="images/hero.jpg" class="background-image" alt="Background">
+</div>
+
+<!-- HEADER -->
+<header>
+    <h1>Services Pricing and Packages</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+<!-- MAIN -->
+<main>
+
+<!-- ROW 1 -->
+<section class="services-row">
+
+<div class="service-card">
+<h2>Residential and Commercial</h2>
+
+<p>(agent subscriptions available)</p>
+
+<ul>
+<li>Small Buildings (&lt;2000 sq ft): $150–225</li>
+<li>Average Buildings (2000–3000 sq ft): $200–350</li>
+<li>Luxury Buildings (3000+ sq ft): $350–600</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h2>Virtual Tours / 3D Floorplans</h2>
+
+<ul>
+<li>Small Buildings: $150–200</li>
+<li>Average Buildings: $200–300</li>
+<li>Luxury Buildings: $300–500</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h2>Drone Photos</h2>
+
+<ul>
+<li>Standalone drone photo shoot: $175–300</li>
+<li>Standalone drone video: $175–300</li>
+<li>Drone photo + video: $250–500</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h2>Bundle and Save</h2>
+
+<p>(prices based on size)</p>
+
+<ul>
+<li>Photos + Matterport → $295</li>
+<li>Photos + drone → $325</li>
+<li>Photos + drone + Matterport → $525</li>
+</ul>
+</div>
+
+</section>
+
+<!-- ROW 2 -->
+<section class="services-row">
+
+<div class="service-card">
+<h2>Product Photography</h2>
+
+<ul>
+<li>Basic: $40–75</li>
+<li>Commercial quality: $75–150</li>
+<li>High-end branding: $150–400</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h2>Portraits</h2>
+
+<ul>
+<li>Mini session: $60</li>
+<li>Standard portrait: $60–100</li>
+<li>Family session: $100–150</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h2>Events</h2>
+
+<p>$125/hr Photo Shoot</p>
+</div>
+
+<div class="service-card">
+<h2>Automobiles</h2>
+
+<ul>
+<li>Private owners: $120–250</li>
+<li>Dealership pricing: $25–75</li>
+<li>Marketing shoots: $250–600</li>
+</ul>
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+
+<p>© 2026 Lens2Life Media</p>
+
+<p>
+<a href="https://500px.com/p/lens2lifemedia">Social-500px</a>
+</p>
+
+</footer>
+
+</body>
+</html>}
 
 /* CONTENT ABOVE IMAGE */
 section,

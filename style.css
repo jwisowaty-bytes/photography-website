@@ -182,12 +182,19 @@ z-index: 1;
     color: white; /* Ensure text is readable */
 }
 
-
+/* FOOTER */
 footer{
-text-align:center;
-padding:30px;
-background:black;
-color:white;
+    text-align:center;
+    padding:20px;
+    background:black;
+    color:white;
+
+    position:relative;
+    z-index:2;
+}
+
+footer a{
+    color:white;
 }
 
 #lightbox{

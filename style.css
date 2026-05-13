@@ -95,7 +95,7 @@ font-size:48px;
 }
 
 .scroll-container {
-    background-color: #f1f1f1;
+    background: rgba(255,255,255,0.20);
     overflow-x: auto; /* Enables horizontal scrolling when content overflows */
     white-space: nowrap; /* Prevents images from wrapping to the next line */
     padding: 10px;
